@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>align-content</title>
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="item big">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item big">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item big">8</div>
+            <div class="item">9</div>
+            <div class="item big">10</div>
+            <div class="item big">11</div>
+            <div class="item big">12</div>
+            <div class="item big">13</div>
+        </div>
+
+        <div class="controls">
+            <input type="radio" name="align-content" id="flex-start" onclick="alignContent('flex-start')" />
+            <label for="flex-start">align-content: flex-start;</label>
+            <br />
+            <input type="radio" name="align-content" id="flex-end" onclick="alignContent('flex-end')" />
+            <label for="flex-end">align-content: flex-end;</label>
+            <br />
+            <input type="radio" name="align-content" id="center" onclick="alignContent('center')" />
+            <label for="center">align-content: center;</label>
+            <br />
+            <input type="radio" name="align-content" id="baseline" onclick="alignContent('space-between')" />
+            <label for="space-between">align-content: space-between;</label>
+            <br />
+            <input type="radio" name="align-content" id="stretch" onclick="alignContent('space-around')" checked />
+            <label for="space-around">align-content: space-around;</label>
+            <br />
+            <input type="radio" name="align-content" id="stretch" onclick="alignContent('stretch')" checked />
+            <label for="stretch">align-content: stretch;</label>
+        </div>
+        <script>
+            function alignContent(name) {
+                var container = document.querySelector('#container');
+                container.style.WebkitAlignContent = name;
+                container.style.alignContent = name;
+            }
+        </script>
+    </body>
+</html>

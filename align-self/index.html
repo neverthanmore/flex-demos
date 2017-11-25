@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>flex-grow</title>
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="item big">1</div>
+            <div class="item">2</div>
+            <div class="item" id="three">3</div>
+            <div class="item big">4</div>
+            <div class="item">5</div>
+            <div class="line" id="line"></div>
+        </div>
+        <div class="controls">
+            <input type="radio" name="align-self" id="flex-start" 
+                    onclick="
+                            var container=document.getElementById('three'); 
+                            container.style.WebkitAlignSelf = 'flex-start'; 
+                            container.style.alignSelf = 'flex-start'; 
+                            ">
+            <label for="flex-start">align-self: flex-start;</label>
+        <br>
+            <input type="radio" name="align-self" id="flex-end" 
+                    onclick="
+                            var container=document.getElementById('three'); 
+                            container.style.WebkitAlignSelf = 'flex-end'; 
+                            container.style.alignSelf = 'flex-end'; 
+                            ">
+            <label for="flex-end">align-self: flex-end;</label>
+            <br>
+            <input type="radio" name="align-self" id="center" 
+                    onclick="
+                            var container=document.getElementById('three'); 
+                            container.style.WebkitAlignSelf = 'center'; 
+                            container.style.alignSelf = 'center'; 
+                            ">
+            <label for="center">align-self: center;</label>
+            <br>
+            <input type="radio" name="align-self" id="baseline" 
+                    onclick="
+                            var container=document.getElementById('three'); 
+                            container.style.WebkitAlignSelf = 'baseline';
+                            container.style.alignSelf = 'baseline';
+                            ">
+            <label for="baseline">align-self: baseline;</label>
+            <br>
+            <input type="radio" name="align-self" id="stretch" 
+                    onclick="
+                            var container=document.getElementById('three'); 
+                            container.style.WebkitAlignSelf = 'stretch'; 
+                            container.style.alignSelf = 'stretch'; 
+                            ">
+            <label for="stretch">align-self: stretch;</label>
+            <br>
+            <input type="radio" name="align-self" id="auto" 
+                    onclick="
+                            var container=document.getElementById('three'); 
+                            container.style.WebkitAlignSelf = 'auto'; 
+                            container.style.alignSelf = 'auto'; 
+                            " checked>
+            <label for="auto">align-self: auto;</label>
+        </div>
+    </body>
+</html>

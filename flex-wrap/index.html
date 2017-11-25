@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>flex-wrap</title>
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+
+        <div class="controls">
+            <input type="radio" name="flex-wrap" id="nowrap" onclick="flexWrap('nowrap')" checked />
+            <label for="nowrap">flex-wrap: nowrap;</label>
+            <br />
+            <input type="radio" name="flex-wrap" id="row-reverse" onclick="flexWrap('wrap')" />
+            <label for="wrap">flex-wrap: wrap;</label>
+            <br />
+            <input type="radio" name="flex-wrap" id="column" onclick="flexWrap('wrap-reverse')" />
+            <label for="wrap-reverse">flex-wrap: wrap-reverse;</label>
+        </div>
+        <script>
+            function flexWrap(name) {
+                var container = document.querySelector('#container');
+                container.style.WebkitFlexWrap = name;
+                container.style.flexWrap = name;
+            }
+        </script>
+    </body>
+</html>

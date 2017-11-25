@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>align-items</title>
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="item big">1</div>
+            <div class="item">2</div>
+            <div class="item small">3</div>
+            <div class="item big">4</div>
+            <div class="item">5</div>
+            <div class="line" id="line"></div>
+        </div>
+
+        <div class="controls">
+            <input type="radio" name="align-items" id="flex-start" onclick="alignItems('flex-start', 'hidden')" />
+            <label for="flex-start">align-items: flex-start;</label>
+            <br />
+            <input type="radio" name="align-items" id="flex-end" onclick="alignItems('flex-end', 'hidden')" />
+            <label for="flex-end">align-items: flex-end;</label>
+            <br />
+            <input type="radio" name="align-items" id="center" onclick="alignItems('center', 'hidden')" />
+            <label for="center">align-items: center;</label>
+            <br />
+            <input type="radio" name="align-items" id="baseline" onclick="alignItems('baseline', 'visible')" />
+            <label for="baseline">align-items: baseline;</label>
+            <br />
+            <input type="radio" name="align-items" id="stretch" onclick="alignItems('stretch', 'hidden')" checked />
+            <label for="stretch">align-items: stretch;</label>
+        </div>
+        <script>
+            function alignItems(name, show) {
+                var container = document.querySelector('#container');
+                container.style.WebkitAlignItems = name;
+                container.style.alignItems = name;
+                document.querySelector('#line').style.visibility = show;
+            }
+        </script>
+    </body>
+</html>
